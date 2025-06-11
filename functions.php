@@ -19,7 +19,17 @@ function register_acf_blocks()
             ['about-video', 'About Video', '"About Us" + video'],
             ['contact-cta', 'Contact CTA', 'Get in touch'],
             ['footer-info', 'Footer Info', 'Footer cuối trang'],
-            ['disclaimer-block', 'Disclaimer Block', 'Đoạn disclaimer cuối trang']
+            ['hero-section-2', 'Hero Section 2', 'Block hero section thứ 2'],
+            ['news-featured-slider', 'News/Featured Slider', 'Block slider tin nổi bật'],
+            ['news-grid-list', 'News Grid/List', 'Block danh sách tin dạng lưới'],
+            ['resource-section', 'Resource Section', 'Block hiển thị ảnh và nội dung tài nguyên'],
+            ['resource-section-noimg', 'Resource Section No Image', 'Block hiển thị nội dung tài nguyên không có ảnh'],
+            ['quote-section', 'Quote/Testimonial Section', 'Block trích dẫn/nhận xét'],
+            ['news-featured-slider-2', 'News/Featured Slider 2', 'Block slider tin nổi bật không có mũi tên'],
+            ['related-news', 'Related News', 'Block hiển thị tin liên quan dạng lưới'],
+            ['hero-section-3', 'Hero Section 3', 'Block hero section thứ 3'],
+            ['contact-cta-v2', 'Contact CTA V2', 'Block call to action liên hệ với nền họa tiết vẽ bằng CSS'],
+            ['contact-cta-v3', 'Contact CTA V3', 'Block form đăng ký nhận tin với nền họa tiết vẽ bằng CSS'],
         ];
         foreach ($blocks as $block) {
             acf_register_block_type([

@@ -331,13 +331,6 @@ if (function_exists('acf_add_local_field_group')):
         'title' => 'Contact CTA',
         'fields' => [
             [
-                'key' => 'field_cta_background',
-                'label' => 'Background Image',
-                'name' => 'cta_background',
-                'type' => 'image',
-                'return_format' => 'array',
-            ],
-            [
                 'key' => 'field_cta_note',
                 'label' => 'CTA Note',
                 'name' => 'cta_note',
@@ -467,6 +460,412 @@ if (function_exists('acf_add_local_field_group')):
             ],
         ],
         'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/disclaimer-block']]],
+    ]);
+
+    // 11. Hero Section 2 Block
+    acf_add_local_field_group([
+        'key' => 'group_hero_section_2',
+        'title' => 'Hero Section 2',
+        'fields' => [
+            [
+                'key' => 'field_hero2_eyebrow',
+                'label' => 'Eyebrow',
+                'name' => 'hero2_eyebrow',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_hero2_title',
+                'label' => 'Title',
+                'name' => 'hero2_title',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_hero2_description',
+                'label' => 'Description',
+                'name' => 'hero2_description',
+                'type' => 'textarea',
+            ],
+            [
+                'key' => 'field_hero2_image',
+                'label' => 'Background Image',
+                'name' => 'hero2_image',
+                'type' => 'image',
+                'return_format' => 'array',
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/hero-section-2']]],
+    ]);
+
+    // 12. News/Featured Slider Block
+    acf_add_local_field_group([
+        'key' => 'group_news_featured_slider',
+        'title' => 'News/Featured Slider',
+        'fields' => [
+            [
+                'key' => 'field_slider_items',
+                'label' => 'Slider Items',
+                'name' => 'slider_items',
+                'type' => 'repeater',
+                'sub_fields' => [
+                    [
+                        'key' => 'field_slider_featured',
+                        'label' => 'Featured',
+                        'name' => 'featured',
+                        'type' => 'true_false',
+                        'ui' => 1,
+                    ],
+                    [
+                        'key' => 'field_slider_title',
+                        'label' => 'Title',
+                        'name' => 'title',
+                        'type' => 'text',
+                    ],
+                    [
+                        'key' => 'field_slider_description',
+                        'label' => 'Description',
+                        'name' => 'description',
+                        'type' => 'textarea',
+                    ],
+                    [
+                        'key' => 'field_slider_image',
+                        'label' => 'Image',
+                        'name' => 'image',
+                        'type' => 'image',
+                        'return_format' => 'array',
+                    ],
+                    [
+                        'key' => 'field_slider_link',
+                        'label' => 'Link',
+                        'name' => 'link',
+                        'type' => 'url',
+                    ],
+                ],
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/news-featured-slider']]],
+    ]);
+
+    // 13. News Grid/List Block
+    acf_add_local_field_group([
+        'key' => 'group_news_grid_list',
+        'title' => 'News Grid/List',
+        'fields' => [
+            [
+                'key' => 'field_news_grid_title',
+                'label' => 'Section Title',
+                'name' => 'news_grid_title',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_news_grid_count',
+                'label' => 'Số lượng tin hiển thị',
+                'name' => 'news_grid_count',
+                'type' => 'number',
+                'default_value' => 9,
+            ],
+            [
+                'key' => 'field_news_grid_category',
+                'label' => 'Chuyên mục tin',
+                'name' => 'news_grid_category',
+                'type' => 'taxonomy',
+                'taxonomy' => 'category',
+                'field_type' => 'select',
+                'allow_null' => 1,
+                'add_term' => 0,
+                'return_format' => 'id',
+                'multiple' => 0,
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/news-grid-list']]],
+    ]);
+
+    // 14. Resource Section Block
+    acf_add_local_field_group([
+        'key' => 'group_resource_section',
+        'title' => 'Resource Section',
+        'fields' => [
+            [
+                'key' => 'field_resource_image',
+                'label' => 'Image',
+                'name' => 'resource_image',
+                'type' => 'image',
+                'return_format' => 'array',
+            ],
+            [
+                'key' => 'field_resource_title',
+                'label' => 'Title',
+                'name' => 'resource_title',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_resource_content',
+                'label' => 'Content',
+                'name' => 'resource_content',
+                'type' => 'wysiwyg',
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/resource-section']]],
+    ]);
+
+    // 15. Quote/Testimonial Section Block
+    acf_add_local_field_group([
+        'key' => 'group_quote_section',
+        'title' => 'Quote/Testimonial Section',
+        'fields' => [
+            [
+                'key' => 'field_quote_text',
+                'label' => 'Quote Text',
+                'name' => 'quote_text',
+                'type' => 'textarea',
+            ],
+            [
+                'key' => 'field_quote_author',
+                'label' => 'Author',
+                'name' => 'quote_author',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_quote_author_info',
+                'label' => 'Author Info',
+                'name' => 'quote_author_info',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_quote_image',
+                'label' => 'Image',
+                'name' => 'quote_image',
+                'type' => 'image',
+                'return_format' => 'array',
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/quote-section']]],
+    ]);
+
+    // 16. News/Featured Slider 2
+    acf_add_local_field_group([
+        'key' => 'group_news_featured_slider_2',
+        'title' => 'News/Featured Slider 2',
+        'fields' => [
+            [
+                'key' => 'field_slider2_items',
+                'label' => 'Slider Items',
+                'name' => 'slider2_items',
+                'type' => 'repeater',
+                'sub_fields' => [
+                    [
+                        'key' => 'field_slider2_featured',
+                        'label' => 'Featured',
+                        'name' => 'featured',
+                        'type' => 'true_false',
+                        'ui' => 1,
+                    ],
+                    [
+                        'key' => 'field_slider2_title',
+                        'label' => 'Title',
+                        'name' => 'title',
+                        'type' => 'text',
+                    ],
+                    [
+                        'key' => 'field_slider2_description',
+                        'label' => 'Description',
+                        'name' => 'description',
+                        'type' => 'textarea',
+                    ],
+                    [
+                        'key' => 'field_slider2_image',
+                        'label' => 'Image',
+                        'name' => 'image',
+                        'type' => 'image',
+                        'return_format' => 'array',
+                    ],
+                    [
+                        'key' => 'field_slider2_link',
+                        'label' => 'Link',
+                        'name' => 'link',
+                        'type' => 'url',
+                    ],
+                ],
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/news-featured-slider-2']]],
+    ]);
+
+    // 17. Related News Block
+    acf_add_local_field_group([
+        'key' => 'group_related_news',
+        'title' => 'Related News',
+        'fields' => [
+            [
+                'key' => 'field_related_news_title',
+                'label' => 'Section Title',
+                'name' => 'related_news_title',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_related_news_count',
+                'label' => 'Số lượng tin hiển thị',
+                'name' => 'related_news_count',
+                'type' => 'number',
+                'default_value' => 3,
+            ],
+            [
+                'key' => 'field_related_news_category',
+                'label' => 'Chuyên mục tin',
+                'name' => 'related_news_category',
+                'type' => 'taxonomy',
+                'taxonomy' => 'category',
+                'field_type' => 'select',
+                'allow_null' => 1,
+                'add_term' => 0,
+                'return_format' => 'id',
+                'multiple' => 0,
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/related-news']]],
+    ]);
+
+    // 18. Hero Section 3 Block
+    acf_add_local_field_group([
+        'key' => 'group_hero_section_3',
+        'title' => 'Hero Section 3',
+        'fields' => [
+            [
+                'key' => 'field_hero3_eyebrow',
+                'label' => 'Eyebrow',
+                'name' => 'hero3_eyebrow',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_hero3_title',
+                'label' => 'Title',
+                'name' => 'hero3_title',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_hero3_description',
+                'label' => 'Description',
+                'name' => 'hero3_description',
+                'type' => 'textarea',
+            ],
+            [
+                'key' => 'field_hero3_image',
+                'label' => 'Background Image',
+                'name' => 'hero3_image',
+                'type' => 'image',
+                'return_format' => 'array',
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/hero-section-3']]],
+    ]);
+
+    // 19. Resource Section No Image Block
+    acf_add_local_field_group([
+        'key' => 'group_resource_section_noimg',
+        'title' => 'Resource Section No Image',
+        'fields' => [
+            [
+                'key' => 'field_resource_noimg_title',
+                'label' => 'Title',
+                'name' => 'resource_noimg_title',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_resource_noimg_content',
+                'label' => 'Content',
+                'name' => 'resource_noimg_content',
+                'type' => 'wysiwyg',
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/resource-section-noimg']]],
+    ]);
+
+    // 20. Contact CTA V2 Block
+    acf_add_local_field_group([
+        'key' => 'group_contact_cta_v2',
+        'title' => 'Contact CTA V2',
+        'fields' => [
+            [
+                'key' => 'field_cta2_eyebrow',
+                'label' => 'Eyebrow',
+                'name' => 'cta2_eyebrow',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_cta2_title',
+                'label' => 'Title',
+                'name' => 'cta2_title',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_cta2_desc',
+                'label' => 'Description',
+                'name' => 'cta2_desc',
+                'type' => 'textarea',
+            ],
+            [
+                'key' => 'field_cta2_button_text',
+                'label' => 'Button Text',
+                'name' => 'cta2_button_text',
+                'type' => 'text',
+                'default_value' => 'Contact us',
+            ],
+            [
+                'key' => 'field_cta2_button_link',
+                'label' => 'Button Link',
+                'name' => 'cta2_button_link',
+                'type' => 'url',
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/contact-cta-v2']]],
+    ]);
+
+    // 21. Contact CTA V3 Block
+    acf_add_local_field_group([
+        'key' => 'group_contact_cta_v3',
+        'title' => 'Contact CTA V3',
+        'fields' => [
+            [
+                'key' => 'field_cta3_eyebrow',
+                'label' => 'Eyebrow',
+                'name' => 'cta3_eyebrow',
+                'type' => 'text',
+                'default_value' => "LET'S TALK",
+            ],
+            [
+                'key' => 'field_cta3_title',
+                'label' => 'Title',
+                'name' => 'cta3_title',
+                'type' => 'text',
+            ],
+            [
+                'key' => 'field_cta3_desc',
+                'label' => 'Description',
+                'name' => 'cta3_desc',
+                'type' => 'textarea',
+            ],
+            [
+                'key' => 'field_cta3_btn_text',
+                'label' => 'Button Text',
+                'name' => 'cta3_btn_text',
+                'type' => 'text',
+                'default_value' => 'Contact us',
+            ],
+            [
+                'key' => 'field_cta3_btn_link',
+                'label' => 'Button Link',
+                'name' => 'cta3_btn_link',
+                'type' => 'url',
+            ],
+            // Các trường cho form
+            [
+                'key' => 'field_cta3_form_shortcode',
+                'label' => 'Form Shortcode',
+                'name' => 'cta3_form_shortcode',
+                'type' => 'text',
+                'instructions' => 'Dán shortcode của form (Contact Form 7, WPForms, v.v.) hoặc để trống để dùng form mặc định.',
+            ],
+        ],
+        'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/contact-cta-v3']]],
     ]);
 
 endif;
