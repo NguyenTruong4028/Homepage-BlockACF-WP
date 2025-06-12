@@ -57,7 +57,7 @@ $footer_text_3 = get_field('footer_text_3');
                     <?php if ($footer_text_3): ?><span><?php echo esc_html($footer_text_3); ?></span><?php endif; ?>
                 </div>
                 <div class="footer-bottom-copyright">
-                    <span>&copy; <?php echo date('Y'); ?> <?php echo esc_html($copyright); ?></span>
+                    <span><?php echo esc_html($copyright); ?></span>
                     <?php if ($policy_link): ?><a href="<?php echo esc_url($policy_link); ?>" target="_blank">Privacy Policy</a><?php endif; ?>
                     <?php if ($provider_agreement_link): ?><a href="<?php echo esc_url($provider_agreement_link); ?>" target="_blank">Provider Agreement</a><?php endif; ?>
                 </div>
