@@ -18,4 +18,12 @@
             </a>
         <?php endif; ?>
     </div>
+    <?php if (get_field('cta2_background_image')): ?>
+        <div class="cta2-background-image">
+            <?php
+            $image = get_field('cta2_background_image');
+            echo wp_get_attachment_image($image['ID'], 'full', false, array('class' => 'cta2-bg-img'));
+            ?>
+        </div>
+    <?php endif; ?>
 </section>

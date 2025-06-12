@@ -34,4 +34,12 @@
             </form>
         <?php } ?>
     </div>
+    <?php if (get_field('cta3_background_image')): ?>
+        <div class="cta3-background-image">
+            <?php
+            $image = get_field('cta3_background_image');
+            echo wp_get_attachment_image($image['ID'], 'full', false, array('class' => 'cta3-bg-img'));
+            ?>
+        </div>
+    <?php endif; ?>
 </section>

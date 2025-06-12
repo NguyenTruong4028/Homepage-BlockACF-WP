@@ -17,9 +17,9 @@ function register_acf_blocks()
             ['blue-statement', 'Blue Statement', 'Đoạn văn bản nền xanh'],
             ['product-cards', 'Product Cards', 'Các sản phẩm'],
             ['about-video', 'About Video', '"About Us" + video'],
-            ['contact-cta', 'Contact CTA', 'Get in touch'],
+            ['contact-cta', 'Contact CTA', 'Đoạn văn cam kết'],
             ['footer-info', 'Footer Info', 'Footer cuối trang'],
-            ['hero-section-2', 'Hero Section 2', 'Block hero section thứ 2'],
+            ['hero-section-2', 'Hero Section 2', 'Block hero section cho News'],
             ['news-featured-slider', 'News/Featured Slider', 'Block slider tin nổi bật'],
             ['news-grid-list', 'News Grid/List', 'Block danh sách tin dạng lưới'],
             ['resource-section', 'Resource Section', 'Block hiển thị ảnh và nội dung tài nguyên'],
@@ -27,9 +27,9 @@ function register_acf_blocks()
             ['quote-section', 'Quote/Testimonial Section', 'Block trích dẫn/nhận xét'],
             ['news-featured-slider-2', 'News/Featured Slider 2', 'Block slider tin nổi bật không có mũi tên'],
             ['related-news', 'Related News', 'Block hiển thị tin liên quan dạng lưới'],
-            ['hero-section-3', 'Hero Section 3', 'Block hero section thứ 3'],
-            ['contact-cta-v2', 'Contact CTA V2', 'Block call to action liên hệ với nền họa tiết vẽ bằng CSS'],
-            ['contact-cta-v3', 'Contact CTA V3', 'Block form đăng ký nhận tin với nền họa tiết vẽ bằng CSS'],
+            ['hero-section-3', 'Hero Section 3', 'Block hero section cho Lorem'],
+            ['contact-cta-v2', 'Contact CTA V2', 'Block call to action liên hệ'],
+            ['contact-cta-v3', 'Contact CTA V3', 'Block form đăng ký nhận tin'],
         ];
         foreach ($blocks as $block) {
             acf_register_block_type([
@@ -55,7 +55,6 @@ add_action('wp_enqueue_scripts', 'homepage_theme_enqueue_styles');
 
 function homepage_theme_add_editor_styles()
 {
-    add_theme_support('editor-styles');
     add_editor_style('style.css');
 }
 add_action('after_setup_theme', 'homepage_theme_add_editor_styles');

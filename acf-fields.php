@@ -815,6 +815,15 @@ if (function_exists('acf_add_local_field_group')):
                 'name' => 'cta2_button_link',
                 'type' => 'url',
             ],
+            [
+                'key' => 'field_cta2_background_image',
+                'label' => 'Background Image',
+                'name' => 'cta2_background_image',
+                'type' => 'image',
+                'return_format' => 'array',
+                'preview_size' => 'medium',
+                'library' => 'all',
+            ],
         ],
         'location' => [[['param' => 'block', 'operator' => '==', 'value' => 'acf/contact-cta-v2']]],
     ]);
@@ -855,6 +864,15 @@ if (function_exists('acf_add_local_field_group')):
                 'label' => 'Button Link',
                 'name' => 'cta3_btn_link',
                 'type' => 'url',
+            ],
+            [
+                'key' => 'field_cta3_background_image',
+                'label' => 'Background Image',
+                'name' => 'cta3_background_image',
+                'type' => 'image',
+                'return_format' => 'array',
+                'preview_size' => 'medium',
+                'library' => 'all',
             ],
             // Các trường cho form
             [
